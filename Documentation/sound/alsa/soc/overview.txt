@@ -7,6 +7,10 @@ pxa2xx, au1x00, iMX, etc) and portable audio codecs.  Prior to the ASoC
 subsystem there was some support in the kernel for SoC audio, however it
 had some limitations:-
 
+ASoC層のプロジェクト全体の目標は、組み込みシステム（例えばpxa2xx, au1x00, iMXなど）のための
+より良いALSAサポートやポータブルなオーディオコーデックを提供することです。
+しかし、いくつかの制限があります。
+
   * Codec drivers were often tightly coupled to the underlying SoC
     CPU. This is not ideal and leads to code duplication - for example,
     Linux had different wm8731 drivers for 4 different SoC platforms.

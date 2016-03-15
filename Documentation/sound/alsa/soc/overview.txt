@@ -1,4 +1,4 @@
-ALSA SoC Layer
+ALSA SoC Layer（ALSA SoC層）
 ==============
 
 The overall project goal of the ALSA System on Chip (ASoC) layer is to
@@ -27,19 +27,22 @@ ASoC層のプロジェクト全体の目標は、組み込みシステム（例�
     power via changing codec oversampling rates, bias currents, etc.
 
 
-ASoC Design
+ASoC Design（ASoCの設計）
 ===========
 
 The ASoC layer is designed to address these issues and provide the following
 features :-
+ASoC層はこれらの問題や次の機能に対応するよう設計されている。
 
   * Codec independence. Allows reuse of codec drivers on other platforms
     and machines.
+　　コーデックは独立する。他のプラットフォームやマシンでの再利用を可能にする。
 
   * Easy I2S/PCM audio interface setup between codec and SoC. Each SoC
     interface and codec registers its audio interface capabilities with the
     core and are subsequently matched and configured when the application
     hardware parameters are known.
+
 
   * Dynamic Audio Power Management (DAPM). DAPM automatically sets the codec to
     its minimum power state at all times. This includes powering up/down
@@ -55,21 +58,26 @@ features :-
 
 To achieve all this, ASoC basically splits an embedded audio system into
 multiple re-usable component drivers :-
+これら全てを達成するために、ASoCは複数の再利用可能なコンポーネントドライバへ、オーディオシステムを分割する
 
   * Codec class drivers: The codec class driver is platform independent and
     contains audio controls, audio interface capabilities, codec DAPM
     definition and codec IO functions. This class extends to BT, FM and MODEM
     ICs if required. Codec class drivers should be generic code that can run
     on any architecture and machine.
+　　コーデッククラスドライバ：コーデッククラスドライバはプラットホームから独立する。そして、
+　　オーディオコントロール、オーディオ・インターフェイス機能、DAPMとコーデックIO機能を含んでいる。
 
   * Platform class drivers: The platform class driver includes the audio DMA
     engine driver, digital audio interface (DAI) drivers (e.g. I2S, AC97, PCM)
     and any audio DSP drivers for that platform.
+　　プラットホーム クラス ドライバ：
 
   * Machine class driver: The machine driver class acts as the glue that
     decribes and binds the other component drivers together to form an ALSA
     "sound card device". It handles any machine specific controls and
     machine level audio events (e.g. turning on an amp at start of playback).
+　　マシン クラス ドライバ：
 
 
 Documentation

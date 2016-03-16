@@ -52,7 +52,9 @@ suspend()/resume()
 The machine driver has pre and post versions of suspend and resume to take care
 of any machine audio tasks that have to be done before or after the codec, DAIs
 and DMA is suspended and resumed. Optional.
-
+マシンドライバが一時停止し、前またはコーデックの後に実行する必要が任意のマシンの
+オーディオタスクの世話をするために再開し、DAIとDMAを中断および再開されたの前と後の
+バージョンがあります。 任意です。
 
 Machine DAI Configuration
 -------------------------

@@ -45,7 +45,7 @@ struct snd_soc_card {
 probe()/remove()
 ----------------
 probe/remove are optional. Do any machine specific probe here.
-
+probe/removeはオプションです。ここで任意のマシンの特定の初期化を行います
 
 suspend()/resume()
 ------------------

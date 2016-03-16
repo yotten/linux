@@ -15,6 +15,7 @@ the audio subsystem with the kernel as a platform device and is represented by
 the following struct:-
 
 マシンドライバは、コーデックと、プラットフォーム固有のコードを含めることができます。
+以下は、プラットフォームデバイスとしてカーネルとオーディオ・サブシステムを登録し、以下の構造体で表現されています： - 
 
 /* SoC machine */
 struct snd_soc_card {

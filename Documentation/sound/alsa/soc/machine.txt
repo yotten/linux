@@ -14,6 +14,8 @@ The machine driver can contain codec and platform specific code. It registers
 the audio subsystem with the kernel as a platform device and is represented by
 the following struct:-
 
+マシンドライバは、コーデックと、プラットフォーム固有のコードを含めることができます。
+
 /* SoC machine */
 struct snd_soc_card {
 	char *name;

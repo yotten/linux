@@ -7,6 +7,8 @@ relationships between each componnent which include audio paths, GPIOs,
 interrupts, clocking, jacks and voltage regulators.
 
 ASoCドライバは全てのコンポーネントドライバ（コーデック、プラットホーム、DAIなど）を含んだコードです。
+また、オーディオパス、GPIO、割り込み、クロッキング、ジャックおよび電圧レギュレータを含む
+各コンポーネント間の関係を記載しています。
 
 The machine driver can contain codec and platform specific code. It registers
 the audio subsystem with the kernel as a platform device and is represented by
